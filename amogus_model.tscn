@@ -1,0 +1,200 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx64ale2m4ihj"]
+
+[ext_resource type="PackedScene" uid="uid://bekd5ieh2khkk" path="res://amogus.blend" id="1_kvmbc"]
+[ext_resource type="Script" path="res://amogus_model.gd" id="2_bhor1"]
+[ext_resource type="Material" uid="uid://cvkq5ir74o3b2" path="res://red.tres" id="2_lm02t"]
+[ext_resource type="Material" uid="uid://bs8bxswjyll3y" path="res://visor.tres" id="3_fkh3r"]
+[ext_resource type="Material" uid="uid://7x3xygbxw8qf" path="res://backpack.tres" id="4_6xrx5"]
+
+[sub_resource type="Animation" id="Animation_nqso5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sphere003:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0.583067, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sphere003:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sphere002:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5, 0.583067, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sphere002:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ocw02"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sphere003:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sphere003:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5, 0.583067, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sphere002:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sphere002:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.5, 0.583067, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xpcx4"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sphere003:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(0.5, 0.546345, -0.316443), Vector3(0.5, 0.583067, 0), Vector3(0.5, 0.553644, 0.297866), Vector3(0.5, 0.761889, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sphere003:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(0.327738, 0, 0), Vector3(0, 0, 0), Vector3(-0.34465, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sphere002:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(-0.5, 0.614383, 0.176201), Vector3(-0.5, 0.732316, 0), Vector3(-0.5, 0.544474, -0.338411), Vector3(-0.5, 0.583067, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sphere002:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(2, 0.5, 2, 0.5),
+"update": 0,
+"values": [Vector3(-0.296095, 0, 0), Vector3(0, 0, 0), Vector3(0.268187, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6e3iw"]
+_data = {
+"RESET": SubResource("Animation_nqso5"),
+"idle": SubResource("Animation_ocw02"),
+"walk": SubResource("Animation_xpcx4")
+}
+
+[node name="amogus_model" instance=ExtResource("1_kvmbc")]
+script = ExtResource("2_bhor1")
+
+[node name="Sphere" parent="." index="0"]
+material_override = ExtResource("2_lm02t")
+
+[node name="Sphere001" parent="." index="1"]
+material_override = ExtResource("3_fkh3r")
+
+[node name="Sphere002" parent="." index="2"]
+transform = Transform3D(0.236856, 0, 0, 0, 0.382175, 0, 0, 0, 0.236856, -0.5, 0.583067, 0)
+material_override = ExtResource("2_lm02t")
+
+[node name="Sphere003" parent="." index="3"]
+transform = Transform3D(0.236856, 0, 0, 0, 0.382175, 0, 0, 0, 0.236856, 0.5, 0.583067, 0)
+material_override = ExtResource("2_lm02t")
+
+[node name="Cube" parent="." index="4"]
+material_override = ExtResource("4_6xrx5")
+
+[node name="WalkAnimation" type="AnimationPlayer" parent="." index="5"]
+playback_default_blend_time = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_6e3iw")
+}
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+visible = false
+size = Vector3(10, 1, 10)

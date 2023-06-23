@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://5js4esuj0jqt"]
+
+[ext_resource type="PackedScene" uid="uid://q4kuaajhstco" path="res://gun.blend" id="1_l08ib"]
+[ext_resource type="Script" path="res://gun.gd" id="2_w0suh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kk3wk"]
+albedo_color = Color(0.521569, 0.521569, 0.521569, 1)
+metallic = 1.0
+metallic_specular = 0.87
+roughness = 0.44
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rct20"]
+albedo_color = Color(0.721569, 0.721569, 0.721569, 1)
+metallic = 1.0
+metallic_specular = 0.87
+
+[node name="gun" instance=ExtResource("1_l08ib")]
+script = ExtResource("2_w0suh")
+
+[node name="Cube" parent="." index="0"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_kk3wk")
+
+[node name="Cube001" parent="." index="1"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_kk3wk")
+
+[node name="Cube002" parent="." index="2"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_kk3wk")
+
+[node name="Cube003" parent="." index="3"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_kk3wk")
+
+[node name="Cube004" parent="." index="4"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_kk3wk")
+
+[node name="Cylinder" parent="." index="5"]
+layers = 4
+surface_material_override/0 = SubResource("StandardMaterial3D_rct20")

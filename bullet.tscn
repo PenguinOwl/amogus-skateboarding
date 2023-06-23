@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv7nysdcob54d"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_sww5o"]
+[ext_resource type="Material" uid="uid://bqfxjdvckhm4h" path="res://bullet_normal.tres" id="2_8y4j4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pobau"]
+size = Vector3(0.5, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1r6i"]
+size = Vector3(0.5, 0.1, 0.1)
+
+[node name="bullet" type="Area3D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_sww5o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 4
+mesh = SubResource("BoxMesh_pobau")
+surface_material_override/0 = ExtResource("2_8y4j4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_i1r6i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

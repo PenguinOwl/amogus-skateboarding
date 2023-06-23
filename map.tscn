@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmyqw6r202kq7"]
+
+[ext_resource type="PackedScene" uid="uid://cob1366ukebpt" path="res://map.blend" id="1_7ftx3"]
+[ext_resource type="Material" uid="uid://bx6qeabdhq2s" path="res://addons/kenney_prototype_tools/materials/dark/material_01.tres" id="2_1eqja"]
+[ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="3_0a4aq"]
+
+[node name="map" instance=ExtResource("1_7ftx3")]
+
+[node name="Light" parent="." index="0"]
+transform = Transform3D(-0.290865, -0.771101, 0.566393, -0.055189, 0.604525, 0.794672, -0.955171, 0.199883, -0.218391, 4.07625, 146.574, -1.00545)
+visible = false
+light_energy = 5.79
+
+[node name="Plane" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_1eqja")
+surface_material_override/1 = ExtResource("3_0a4aq")
+surface_material_override/2 = ExtResource("3_0a4aq")
+surface_material_override/3 = ExtResource("3_0a4aq")

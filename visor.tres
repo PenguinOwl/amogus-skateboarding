@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bs8bxswjyll3y"]
+
+[resource]
+metallic = 1.0
+roughness = 0.28
+clearcoat_enabled = true
